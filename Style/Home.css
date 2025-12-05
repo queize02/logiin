@@ -87,30 +87,14 @@ body {
 }
 
 .nav-links li a {
-color: white;
+    color: white;
     font-size: 16px;
     font-family: 'Courier New', Courier, monospace;
     padding: 5px 0; /* Padding seulement vertical */
-    position: relative; /* 🔑 CLÉ: Nécessaire pour positionner l'élément ::after */
-    transition: color var(--transition-speed) ease;
+    position: relative;
+    /* ... styles after/hover ... */
 }
 
-.nav-links li a::after {
-    content: ''; /* 🔑 Obligatoire pour les pseudo-éléments */
-    position: absolute;
-    bottom: 0; /* Positionner la barre en bas du lien */
-    left: 0;
-    width: 0; /* 🔑 Largeur initiale: 0 (invisible) */
-    height: 2px; /* Épaisseur de la ligne */
-    background-color: white; /* Couleur du soulignement */
-    
-    /* 🔑 CLÉ: La transition pour le mouvement du soulignement */
-    transition: width var(--transition-speed) ease;
-}
-
-.nav-links li a:hover::after {
-    width: 100%; /* 🔑 Au survol, la largeur passe à 100% (effet de déploiement) */
-}
 /* --- STYLES DES BOUTONS LOGIN/REGISTER --- */
 
 
@@ -258,5 +242,4 @@ color: white;
         width: 150px; 
         text-align: center;
     }
-
 }
